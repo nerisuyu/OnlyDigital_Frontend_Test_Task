@@ -1,0 +1,75 @@
+.main {
+    padding: 5%;
+
+}
+
+
+.spoiler {
+    padding: 10px;
+    margin: 20px;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.spoiler:focus,
+.spoiler:hover,
+.spoiler:active {
+    cursor: pointer;
+}
+
+
+
+
+.spoiler-header {
+    font-size: 1em;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.spoiler-collapsed .spoiler-header {
+    color: black;
+}
+
+.spoiler-expanded .spoiler-header {
+    color: rgb(83, 83, 117);
+}
+
+.spoiler-collapsed .spoiler-header::after,
+.spoiler-expanded .spoiler-header::after {
+    content: '';
+    background-image: url('../svg/plus.svg');
+    background-size: 18px 18px;
+    height: 18px;
+    width: 18px;
+    display: block;
+    float: right;
+
+}
+
+.spoiler-expanded .spoiler-header::after {
+    background-image: url('../svg/minus.svg');
+}
+
+
+.spoiler-content {
+    font-size: small;
+
+    text-align: justify;
+    /* Выравнивание по ширине */
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.spoiler-collapsed .spoiler-content {
+    display: none;
+}
+
+.spoiler-expanded .spoiler-content {
+    display: block;
+}
